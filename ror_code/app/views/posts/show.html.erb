@@ -1,0 +1,11 @@
+<h1>Title</h1><%= post.title %>
+<h1>Description</h1><%= post.description %>
+
+<%= render 'comments/form' %>
+
+<h1>Comment</h1>
+<% post.comments.each do |comment| %>
+	<%= comment.comment %>
+	<%= link_to "Edit", edit_post_comment_path(post,2)  %>
+	</br>
+<% end %>

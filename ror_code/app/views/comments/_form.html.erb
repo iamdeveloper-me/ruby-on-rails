@@ -1,0 +1,11 @@
+<%= form_for @comment,  url: post_comments_path(post.id) do |f| %>
+	<div class="field">
+	  <%= f.label :comment %><br />
+	  <%= f.text_field :comment, autofocus: true %>
+	</div>
+
+	<div class="actions">
+	  <%= f.submit "Submit" %>
+	</div>
+ <% end %>
+ 
